@@ -192,7 +192,7 @@ unsigned long CircleDecomposer::create_average_grid()
     for(uint y=0; y+blocksize<(uint)this->originalImg.height(); y += blocksize) {
 	for(uint x=0; x+blocksize<(uint)this->originalImg.width(); x += blocksize) {
 	    QRectF currentArea(x,y,radius*2,radius*2);	    
-    	    QColor avgColor = getAverage(this->originalImg, currentArea);
+    	    QColor avgColor = getDominantColor(this->originalImg, currentArea);
 	    if(avgColor != bgColor || !filterBg) {
 		CircleItem *item = new CircleItem(currentArea);
 		item->setBrush(QBrush(avgColor));
