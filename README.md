@@ -10,6 +10,7 @@ Future Work:
 algorithm.
  * Implement a 'dominant color' algorithm, instead of average color.
  * Limit number of colors (color binning).
+ * Implement image segmentation (a la: http://web.cse.ohio-state.edu/~jwdavis/Publications/cvpr11a.pdf)
  * Give a useful summary:
    * Listing of caps needed (how many of each color).
    * How big the surface area will need to be.
