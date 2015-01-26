@@ -2,9 +2,9 @@
 TEMPLATE = app
 FORMS = ../res/main.ui
 SOURCES = cappy.cc cappywindow.cpp ui/CircleDecomposer.cpp
-HEADERS += cappywindow.h ui/CircleDecomposer.hpp
+HEADERS += cappywindow.h ui/CircleDecomposer.hpp ui/CircleItem.hh
 
-LIBS += -lhighgui -lcv -lcxcore
+#LIBS += -lhighgui -lcv -lcxcore
 
 TARGET = cappy
 

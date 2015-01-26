@@ -4,9 +4,6 @@
 
 #include "ui/CircleDecomposer.hpp"
 
-#include <opencv/cv.h>
-#include <opencv/highgui.h>
-
 //DEBUG
 #include <iostream>
 using namespace std;
@@ -23,7 +20,6 @@ class CappyWindow : public QMainWindow, private Ui::MainWindow {
  private:
     QGraphicsScene *original_scene;
     CircleDecomposer *capped_scene;
-    cv::Mat origmat;
 
     void cap_it();
 
@@ -34,7 +30,4 @@ class CappyWindow : public QMainWindow, private Ui::MainWindow {
     Q_SLOT void updateLayout(int);
     Q_SLOT void setParametersEnabled(bool);
     Q_SLOT void bgPicked();
-
-    static unsigned long create_compact_average_grid(cv::Mat &img, cv::Mat &dst, int radius, int spacing);
-    static unsigned long create_average_grid(cv::Mat &img, cv::Mat &dst, int radius, int spacing);
 };

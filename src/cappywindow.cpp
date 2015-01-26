@@ -4,6 +4,7 @@
 #define _CAPPYWINDOW_CPP
 
 #include <cappywindow.h>
+#include <exception>
 
 CappyWindow::CappyWindow(QMainWindow *parent)
     : QMainWindow(parent), original_scene(NULL), capped_scene(NULL)
@@ -83,11 +84,10 @@ bool CappyWindow::loadImage(QString path) {
     this->original_scene->addPixmap(QPixmap(path));
 
     try {
-	this->origmat = cv::imread(path.toStdString());
-	this->capped_scene->setSourceImage(this->origmat);
+	this->capped_scene->setSourceImage(QImage(path));
 	this->setParametersEnabled(true);
     }
-    catch (cv::Exception &e) {
+    catch (std::exception) {
 	this->original_scene->addText("Sorry, eh: Could not read image");
     }
     return true;
