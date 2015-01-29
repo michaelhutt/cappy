@@ -5,6 +5,10 @@ Qt.**
  * The the calculation for 'average' color is just silly.
  * I have a feeling that this will end up as a Qt/OpenCV hybrid.
 
+You'll need Qt 4. Run 'qmake' (often located at /usr/lib64/qt4/bin/qmake) to
+get a Makefile, then run 'make' and you'll have an executable under the 'build'
+directory.
+
 Future Work:
  * Organic cap placement with an edge detector (canny/HOG) and a naive fill
 algorithm.
